@@ -13,6 +13,14 @@ const menu = [
         subs: [{ title: '按钮', key: '/public/button', icon: '' }, { title: '图标', key: '/public/icon', icon: '' }]
     },
     {
+        title: '商品管理',
+        key: '/merchandise',
+        icon: 'appstore',
+        auth: [1],
+        subs: [{ title: '商品', key: '/product', icon: '' }, {title: '分类', key: '/category', icon: ''}]
+    },
+    /*
+    {
         title: '导航',
         key: '/nav',
         icon: 'bulb',
@@ -30,7 +38,7 @@ const menu = [
             { title: '基础表单', key: '/form/base-form', icon: '' },
             { title: '步骤表单', key: '/form/step-form', icon: '' }
         ]
-    },
+    }*/,
     {
         title: '展示',
         key: '/show',
@@ -39,9 +47,11 @@ const menu = [
             { title: '表格', key: '/show/table', icon: '' },
             { title: '折叠面板', key: '/show/collapse', icon: '' },
             { title: '树形控件', key: '/show/tree', icon: '' },
-            { title: '标签页', key: '/show/tabs', icon: '' }
+            { title: '标签页', key: '/show/tabs', icon: '' },
+            { title: '图片展览', key: '/show/gallary', icon: ''}
         ]
     },
+    /*
     {
         title: '其它',
         key: '/others',
@@ -74,7 +84,7 @@ const menu = [
         key: '/about',
         icon: 'user',
         auth: [1]
-    }
+    }*/
 ]
 
 export default menu

@@ -20,6 +20,7 @@ const TableView = loadable(() => import(/* webpackChunkName: 'table' */ '@/views
 const CollapseView = loadable(() => import(/* webpackChunkName: 'collapse' */ '@/views/ShowView/Collapse'))
 const TreeView = loadable(() => import(/* webpackChunkName: 'tree' */ '@/views/ShowView/Tree'))
 const TabsView = loadable(() => import(/* webpackChunkName: 'tabs' */ '@/views/ShowView/Tabs'))
+const GallaryView = loadable(() => import('@/views/ShowView/Gallary'))
 
 // 其它
 const ProgressView = loadable(() => import(/* webpackChunkName: 'progress' */ '@/views/Others/Progress'))
@@ -30,6 +31,12 @@ const UploadView = loadable(() => import(/* webpackChunkName: 'upload' */ '@/vie
 const Three = loadable(() => import(/* webpackChunkName: 'three' */ '@/views/TestView'))
 const About = loadable(() => import(/* webpackChunkName: 'about' */ '@/views/About'))
 
+
+// 商品
+const Product = loadable(() => import ('@/views/ProductView'));
+
+// 分类
+const Category = loadable(() => import ('@/views/Category'));
 const routes = [
     { path: '/index', exact: true, name: 'Index', component: Index, auth: [1] },
     { path: '/public/button', exact: false, name: '按钮', component: ButtonView, auth: [1] },
@@ -43,12 +50,14 @@ const routes = [
     { path: '/show/collapse', exact: false, name: '折叠面板', component: CollapseView },
     { path: '/show/tree', exact: false, name: '树形控件', component: TreeView },
     { path: '/show/tabs', exact: false, name: '标签页', component: TabsView },
+    //{ path: '/show/gallary', exact: false, name: '图片展览', component: GallaryView},
     { path: '/others/progress', exact: false, name: '进度条', component: ProgressView, auth: [1] },
     { path: '/others/animation', exact: false, name: '动画', component: AnimationView, auth: [1] },
     { path: '/others/editor', exact: false, name: '富文本', component: EditorView, auth: [1] },
     { path: '/others/upload', exact: false, name: '上传', component: UploadView, auth: [1] },
     { path: '/one/two/three', exact: false, name: '三级', component: Three },
-    { path: '/about', exact: false, name: '关于', component: About, auth: [1] }
+    { path: '/about', exact: false, name: '关于', component: About, auth: [1] },
+    { path: '/product', exact: false, name: '产品', component: Product, auth: [1] },
+    { path: '/category', exact: false, name: '分类', component: Category, auth: [1]}
 ]
-
 export default routes
